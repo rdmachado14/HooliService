@@ -34,6 +34,8 @@ class HSNovoServicoViewController: UIViewController
     {
         let object = PFObject(className: "Anuncios")
         
+        
+        // salvando os objetos no banco
         object["titulo"] = tfTitulo.text
         object["descricao"] = tfDescricao.text
         
@@ -60,16 +62,16 @@ class HSNovoServicoViewController: UIViewController
     
     @IBAction func btAdicionarFoto(sender: AnyObject)
     {
-        let alert:UIAlertController = UIAlertController(title: "Choose Image",
+        let alert:UIAlertController = UIAlertController(title: "Escolha o tipo.",
             message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
-        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) { UIAlertAction in
+        let cameraAction = UIAlertAction(title: "Câmera", style: UIAlertActionStyle.Default) { UIAlertAction in
             self.openCamera()
         }
-        let gallaryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { UIAlertAction in
+        let gallaryAction = UIAlertAction(title: "Galeria", style: UIAlertActionStyle.Default) { UIAlertAction in
             self.openGallery()
         }
-        let cancelAction = UIAlertAction(title: "cancel", style: UIAlertActionStyle.Cancel) { UIAlertAction in
+        let cancelAction = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Cancel) { UIAlertAction in
             
         }
         
@@ -97,7 +99,8 @@ class HSNovoServicoViewController: UIViewController
     }
     
     
-    func openGallery() {
+    func openGallery()
+    {
         let picker = UIImagePickerController()
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         picker.delegate = self

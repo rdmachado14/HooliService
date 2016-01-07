@@ -44,14 +44,8 @@ class HSServicosViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         
-        //        let myCell = tableView.dequeueReusableCellWithIdentifier("myCell")
-        
         cell.textLabel?.text = searchResults[indexPath.row]
-        
-        //        myCell!.textLabel?.text = searchResults[indexPath.row]
-        
-        //        return myCell!
-        
+
         return cell
         
     }
@@ -95,12 +89,11 @@ class HSServicosViewController: UIViewController, UITableViewDelegate, UITableVi
                 // busca dos objetos no banco
                 for object in objects!
                 {
-                    let firstName = object.objectForKey("categoria") as! String
-//                    let lastName = object.objectForKey("sobrenome") as! String
-                    let fullName = firstName + " "
+                    let categoria = object.objectForKey("categoria") as! String
+                    let resultado = categoria + " "
                     
                     
-                    self.searchResults.append(fullName)
+                    self.searchResults.append(resultado)
                     
                     self.myTableView.reloadData()
                     
@@ -120,9 +113,4 @@ class HSServicosViewController: UIViewController, UITableViewDelegate, UITableVi
         mySearchBar.text = ""
         
     }
-
-    
-
-
-
 }
