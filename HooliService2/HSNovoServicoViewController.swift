@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class HSNovoServicoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
+class HSNovoServicoViewController: UIViewController
 {
 
     @IBOutlet weak var tfTitulo: UITextField!
@@ -17,10 +17,14 @@ class HSNovoServicoViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var minhaCollectionView: UICollectionView!
     @IBOutlet weak var imagem: UIImageView!
     
+    var imagens: [UIImage] = []
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        minhaCollectionView.hidden = true
+
 
     }
 
@@ -50,12 +54,84 @@ class HSNovoServicoViewController: UIViewController, UICollectionViewDelegate, U
         }
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    @IBAction func btAdicionarFoto(sender: AnyObject)
     {
-        return 3
+        let alert:UIAlertController = UIAlertController(title: "Choose Image",
+            message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) { UIAlertAction in
+            self.openCamera()
+        }
+        let gallaryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { UIAlertAction in
+            self.openGallery()
+        }
+        let cancelAction = UIAlertAction(title: "cancel", style: UIAlertActionStyle.Cancel) { UIAlertAction in
+            
+        }
+        
+        alert.addAction(cameraAction)
+        alert.addAction(gallaryAction)
+        alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+        //myCollection.hidden = false
+
+    }
+    
+    func openCamera() {
+        let picker = UIImagePickerController()
+        
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.delegate = self
+            presentViewController(picker, animated: true, completion: nil)
+        }
+        else {
+            openGallery()
+        }
     }
     
     
- 
-
+    func openGallery() {
+        let picker = UIImagePickerController()
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        picker.delegate = self
+        presentViewController(picker, animated: true, completion: nil)
+    }
 }
+
+extension HSNovoServicoViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+    
+    internal func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
+    {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        print("testando a foto: \(image)")
+        imagens.append(image)
+        minhaCollectionView.hidden = false
+        minhaCollectionView.reloadData()
+        
+        //imageHolderButton.setImage(image, forState: .Normal)
+    }
+    
+}
+
+extension HSNovoServicoViewController: UICollectionViewDataSource
+{
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return imagens.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        
+        let cell: HSNovoServicoCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! HSNovoServicoCollectionViewCell
+        cell.imagem.image = imagens[indexPath.row]
+        
+        return cell
+    }
+    
+    
+}
+

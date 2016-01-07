@@ -111,6 +111,13 @@
                                 <rect key="frame" x="154" y="406" width="67" height="30"/>
                                 <state key="normal" title="Categoria"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-BD-7Yu">
+                                <rect key="frame" x="155" y="444" width="65" height="30"/>
+                                <state key="normal" title="Adicionar"/>
+                                <connections>
+                                    <action selector="btAdicionarFoto:" destination="da0-hT-PcZ" eventType="touchUpInside" id="ozW-Rx-maO"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OGw-lq-VCM">
                                 <rect key="frame" x="20" y="80" width="335" height="128"/>
                                 <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -121,7 +128,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Kug-Ga-TN9">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Kug-Ga-TN9" customClass="HSNovoServicoCollectionViewCell" customModule="HooliService2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="69" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -134,6 +141,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="imagem" destination="ZDN-7s-glW" id="Ofk-kd-ieP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -153,7 +163,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="imagem" destination="ZDN-7s-glW" id="iDi-Kv-Igg"/>
                         <outlet property="minhaCollectionView" destination="OGw-lq-VCM" id="d6A-e6-cqv"/>
                         <outlet property="tfDescricao" destination="d3T-Bv-4jy" id="Mtj-J1-FMI"/>
                         <outlet property="tfTitulo" destination="qIe-mv-MtO" id="BAr-xj-eMG"/>
