@@ -25,8 +25,6 @@ class HSServicosViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        
     }
     
     override func didReceiveMemoryWarning()

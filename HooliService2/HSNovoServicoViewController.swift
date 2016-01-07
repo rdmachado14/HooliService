@@ -37,12 +37,13 @@ class HSNovoServicoViewController: UIViewController
         object["titulo"] = tfTitulo.text
         object["descricao"] = tfDescricao.text
         
-//        var fotos: [PFFile] = []
-//        for i in 0..<imagens.count{
-//            let fotoData = UIImagePNGRepresentation(imagens[i])
-//            fotos.append(PFFile(name: "fotos", data: fotoData!)!)
-//            object["imagens\(i)"] = fotos[i]
-//        }
+        var fotos: [PFFile] = []
+        for i in 0..<imagens.count
+        {
+            let fotoData = UIImagePNGRepresentation(imagens[i])
+            fotos.append(PFFile(name: "fotos", data: fotoData!)!)
+            object["imagem\(i)"] = fotos[i]
+        }
 
         
         object.saveInBackgroundWithBlock { (success, error) -> Void in
