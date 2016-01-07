@@ -34,7 +34,6 @@ class HSNovoServicoViewController: UIViewController
     {
         let object = PFObject(className: "Anuncios")
         
-        
         // salvando os objetos no banco
         object["titulo"] = tfTitulo.text
         object["descricao"] = tfDescricao.text
