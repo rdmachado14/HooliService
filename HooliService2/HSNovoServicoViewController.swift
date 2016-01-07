@@ -9,11 +9,13 @@
 import UIKit
 import Parse
 
-class HSNovoServicoViewController: UIViewController
+class HSNovoServicoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
 
     @IBOutlet weak var tfTitulo: UITextField!
     @IBOutlet weak var tfDescricao: UITextField!
+    @IBOutlet weak var minhaCollectionView: UICollectionView!
+    @IBOutlet weak var imagem: UIImageView!
     
     
     override func viewDidLoad()
@@ -47,6 +49,13 @@ class HSNovoServicoViewController: UIViewController
             }
         }
     }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        return 3
+    }
+    
+    
  
 
 }
