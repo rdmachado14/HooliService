@@ -19,28 +19,31 @@ class HSNovoServicoViewController: UIViewController
     
     var imagens: [UIImage] = []
     
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         minhaCollectionView.hidden = true
-
-
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        
     }
     
-
     @IBAction func btSalvar(sender: AnyObject)
     {
         let object = PFObject(className: "Anuncios")
         
         object["titulo"] = tfTitulo.text
         object["descricao"] = tfDescricao.text
+        
+//        var fotos: [PFFile] = []
+//        for i in 0..<imagens.count{
+//            let fotoData = UIImagePNGRepresentation(imagens[i])
+//            fotos.append(PFFile(name: "fotos", data: fotoData!)!)
+//            object["imagens\(i)"] = fotos[i]
+//        }
+
         
         object.saveInBackgroundWithBlock { (success, error) -> Void in
             if success
@@ -73,19 +76,21 @@ class HSNovoServicoViewController: UIViewController
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)
-        //myCollection.hidden = false
 
     }
     
-    func openCamera() {
+    func openCamera()
+    {
         let picker = UIImagePickerController()
         
-        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
+        {
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.delegate = self
             presentViewController(picker, animated: true, completion: nil)
         }
-        else {
+        else
+        {
             openGallery()
         }
     }
@@ -134,4 +139,3 @@ extension HSNovoServicoViewController: UICollectionViewDataSource
     
     
 }
-
