@@ -16,13 +16,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kmJ-Xw-hR6">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-bG-m4Y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kmJ-Xw-hR6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="78N-oy-pmQ"/>
+                            <constraint firstItem="GNO-bG-m4Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="L1S-AI-dEJ"/>
+                            <constraint firstItem="kmJ-Xw-hR6" firstAttribute="top" secondItem="GNO-bG-m4Y" secondAttribute="bottom" id="PcM-4g-foV"/>
+                            <constraint firstAttribute="trailing" secondItem="kmJ-Xw-hR6" secondAttribute="trailing" id="S5g-Fz-RA6"/>
+                            <constraint firstItem="kmJ-Xw-hR6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tz6-96-Hz2"/>
+                            <constraint firstItem="kmJ-Xw-hR6" firstAttribute="trailing" secondItem="GNO-bG-m4Y" secondAttribute="trailing" id="ZO1-RL-CuL"/>
+                            <constraint firstItem="kmJ-Xw-hR6" firstAttribute="leading" secondItem="GNO-bG-m4Y" secondAttribute="leading" id="fw2-KY-u2j"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.5" y="434.5"/>
+            <point key="canvasLocation" x="1231.5" y="656.5"/>
         </scene>
     </scenes>
 </document>
