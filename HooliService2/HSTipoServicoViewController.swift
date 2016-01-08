@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class HSTipoServicoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class HSTipoServicoViewController: UIViewController
 {
 
     @IBOutlet weak var minhaTableView: UITableView!
@@ -56,12 +56,18 @@ class HSTipoServicoViewController: UIViewController, UITableViewDelegate, UITabl
         }
         
     }
-    
+}
+
+extension HSTipoServicoViewController: UITableViewDataSource
+{
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return data.count
     }
-    
+}
+
+extension HSTipoServicoViewController: UITableViewDelegate
+{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
@@ -71,6 +77,6 @@ class HSTipoServicoViewController: UIViewController, UITableViewDelegate, UITabl
         cell!.textLabel!.text = query.objectForKey("categoria") as? String
         
         return cell!
-
+        
     }
 }
