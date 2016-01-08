@@ -17,6 +17,10 @@ class HSNovoServicoViewController: UIViewController
     @IBOutlet weak var minhaCollectionView: UICollectionView!
     @IBOutlet weak var imagem: UIImageView!
     
+    @IBOutlet weak var btCategoria: UIButton!
+    
+    static var categoria = "Categoria"
+
     var imagens: [UIImage] = []
     
     override func viewDidLoad()
@@ -25,6 +29,16 @@ class HSNovoServicoViewController: UIViewController
         minhaCollectionView.hidden = true
     }
 
+    override func viewWillAppear(animated: Bool)
+    {
+        btCategoria.setTitle(HSNovoServicoViewController.categoria, forState: .Normal)
+    }
+    
+    func actionCategoria(categoria:String)
+    {
+        
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

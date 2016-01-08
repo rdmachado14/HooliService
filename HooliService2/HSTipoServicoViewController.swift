@@ -1,10 +1,3 @@
-//
-//  HSTipoServicoViewController.swift
-//  HooliService2
-//
-//  Created by Rodrigo Machado on 1/8/16.
-//  Copyright © 2016 Rodrigo DAngelo Silva Machado. All rights reserved.
-//
 
 import UIKit
 import Parse
@@ -28,7 +21,6 @@ class HSTipoServicoViewController: UIViewController
     
     func loadParse()
     {
-        
         data = []
 
         let servicos = PFQuery(className: "Servicos")
@@ -52,9 +44,7 @@ class HSTipoServicoViewController: UIViewController
                 
                 print("Vazio")
             }
-            
         }
-        
     }
 }
 
@@ -78,5 +68,15 @@ extension HSTipoServicoViewController: UITableViewDelegate
         
         return cell!
         
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        HSNovoServicoViewController.categoria =  (cell?.textLabel?.text)!
+        
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }

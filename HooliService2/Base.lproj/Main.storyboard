@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7JE-vf-GNY" id="B5d-6a-q0s">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-xj-W6V">
@@ -107,13 +107,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-YR-DM8">
-                                <rect key="frame" x="154" y="406" width="67" height="30"/>
-                                <state key="normal" title="Categoria"/>
-                                <connections>
-                                    <segue destination="xa9-AR-zTj" kind="show" id="UlQ-V4-V3Y"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OGw-lq-VCM">
                                 <rect key="frame" x="20" y="80" width="335" height="128"/>
                                 <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -154,6 +147,13 @@
                                     <action selector="btAdicionarFoto:" destination="da0-hT-PcZ" eventType="touchUpInside" id="ozW-Rx-maO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-YR-DM8">
+                                <rect key="frame" x="126" y="406" width="123" height="30"/>
+                                <state key="normal" title="Categoria"/>
+                                <connections>
+                                    <segue destination="xa9-AR-zTj" kind="show" identifier="SegueCategoriaNovoServico" id="UlQ-V4-V3Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -166,6 +166,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="btCategoria" destination="tBf-YR-DM8" id="At1-Ex-KZE"/>
                         <outlet property="minhaCollectionView" destination="OGw-lq-VCM" id="d6A-e6-cqv"/>
                         <outlet property="tfDescricao" destination="d3T-Bv-4jy" id="Mtj-J1-FMI"/>
                         <outlet property="tfTitulo" destination="qIe-mv-MtO" id="BAr-xj-eMG"/>
@@ -195,7 +196,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dOV-1t-cSr" id="tNy-3X-Pq7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
