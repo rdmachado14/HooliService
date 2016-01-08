@@ -8,8 +8,7 @@
 
 import UIKit
 
-class HSNovoServicoCollectionViewCell: UICollectionViewCell {
-    
-    
+class HSNovoServicoCollectionViewCell: UICollectionViewCell
+{
     @IBOutlet weak var imagem: UIImageView!
 }
