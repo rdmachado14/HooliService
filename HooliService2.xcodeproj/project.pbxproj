@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24C602E11C40477A0038274E /* HSDetalhesServicoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C602E01C40477A0038274E /* HSDetalhesServicoTableViewController.swift */; };
+		24C602E31C4047C30038274E /* HSFotosServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C602E21C4047C30038274E /* HSFotosServicoCollectionViewCell.swift */; };
+		24C602E61C404ABE0038274E /* HSFotosCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C602E51C404ABE0038274E /* HSFotosCollectionViewFlowLayout.swift */; };
 		79A570621C3E8E7100A23BCD /* HSServicosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570611C3E8E7100A23BCD /* HSServicosViewController.swift */; };
 		79A570641C3EB41400A23BCD /* HSNovoServicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570631C3EB41400A23BCD /* HSNovoServicoViewController.swift */; };
 		79A570661C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570651C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24C602E01C40477A0038274E /* HSDetalhesServicoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSDetalhesServicoTableViewController.swift; sourceTree = "<group>"; };
+		24C602E21C4047C30038274E /* HSFotosServicoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSFotosServicoCollectionViewCell.swift; sourceTree = "<group>"; };
+		24C602E51C404ABE0038274E /* HSFotosCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSFotosCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		79A570611C3E8E7100A23BCD /* HSServicosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSServicosViewController.swift; sourceTree = "<group>"; };
 		79A570631C3EB41400A23BCD /* HSNovoServicoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNovoServicoViewController.swift; sourceTree = "<group>"; };
 		79A570651C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNovoServicoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24C602E41C4047D00038274E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24C602E21C4047C30038274E /* HSFotosServicoCollectionViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		79A570601C3E8E4200A23BCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				79D862471C3B1A4E008F0D50 /* AppDelegate.swift */,
+				24C602E51C404ABE0038274E /* HSFotosCollectionViewFlowLayout.swift */,
 				79D862511C3B1A4E008F0D50 /* Assets.xcassets */,
 				79D862561C3B1A4E008F0D50 /* Info.plist */,
 				79D8624E1C3B1A4E008F0D50 /* HooliService2.xcdatamodeld */,
@@ -126,6 +141,8 @@
 				79A570631C3EB41400A23BCD /* HSNovoServicoViewController.swift */,
 				79A570651C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift */,
 				79A570671C3FE47700A23BCD /* HSTipoServicoViewController.swift */,
+				24C602E01C40477A0038274E /* HSDetalhesServicoTableViewController.swift */,
+				24C602E41C4047D00038274E /* Cell */,
 			);
 			name = Servicos;
 			sourceTree = "<group>";
@@ -252,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A570621C3E8E7100A23BCD /* HSServicosViewController.swift in Sources */,
+				24C602E61C404ABE0038274E /* HSFotosCollectionViewFlowLayout.swift in Sources */,
+				24C602E31C4047C30038274E /* HSFotosServicoCollectionViewCell.swift in Sources */,
+				24C602E11C40477A0038274E /* HSDetalhesServicoTableViewController.swift in Sources */,
 				79A570661C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift in Sources */,
 				79A570641C3EB41400A23BCD /* HSNovoServicoViewController.swift in Sources */,
 				79D862501C3B1A4E008F0D50 /* HooliService2.xcdatamodeld in Sources */,
