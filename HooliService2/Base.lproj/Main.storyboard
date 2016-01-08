@@ -114,13 +114,6 @@
                                     <segue destination="xa9-AR-zTj" kind="show" id="UlQ-V4-V3Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-BD-7Yu">
-                                <rect key="frame" x="126" y="444" width="123" height="30"/>
-                                <state key="normal" title="Adicionar imagem"/>
-                                <connections>
-                                    <action selector="btAdicionarFoto:" destination="da0-hT-PcZ" eventType="touchUpInside" id="ozW-Rx-maO"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OGw-lq-VCM">
                                 <rect key="frame" x="20" y="80" width="335" height="128"/>
                                 <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -154,6 +147,13 @@
                                     <outlet property="delegate" destination="da0-hT-PcZ" id="aAw-91-FBz"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-BD-7Yu">
+                                <rect key="frame" x="126" y="444" width="123" height="30"/>
+                                <state key="normal" title="Adicionar imagem"/>
+                                <connections>
+                                    <action selector="btAdicionarFoto:" destination="da0-hT-PcZ" eventType="touchUpInside" id="ozW-Rx-maO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
