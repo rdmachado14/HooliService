@@ -10,6 +10,7 @@
 		79A570621C3E8E7100A23BCD /* HSServicosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570611C3E8E7100A23BCD /* HSServicosViewController.swift */; };
 		79A570641C3EB41400A23BCD /* HSNovoServicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570631C3EB41400A23BCD /* HSNovoServicoViewController.swift */; };
 		79A570661C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570651C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift */; };
+		79A570681C3FE47700A23BCD /* HSTipoServicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A570671C3FE47700A23BCD /* HSTipoServicoViewController.swift */; };
 		79D862481C3B1A4E008F0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D862471C3B1A4E008F0D50 /* AppDelegate.swift */; };
 		79D8624D1C3B1A4E008F0D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D8624B1C3B1A4E008F0D50 /* Main.storyboard */; };
 		79D862501C3B1A4E008F0D50 /* HooliService2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79D8624E1C3B1A4E008F0D50 /* HooliService2.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 		79A570611C3E8E7100A23BCD /* HSServicosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSServicosViewController.swift; sourceTree = "<group>"; };
 		79A570631C3EB41400A23BCD /* HSNovoServicoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNovoServicoViewController.swift; sourceTree = "<group>"; };
 		79A570651C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNovoServicoCollectionViewCell.swift; sourceTree = "<group>"; };
+		79A570671C3FE47700A23BCD /* HSTipoServicoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSTipoServicoViewController.swift; sourceTree = "<group>"; };
 		79D862441C3B1A4E008F0D50 /* HooliService2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HooliService2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D862471C3B1A4E008F0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D8624C1C3B1A4E008F0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,12 +91,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		79A570601C3E8E4200A23BCD /* Servicos */ = {
+		79A570601C3E8E4200A23BCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79A5706B1C3FE4E200A23BCD /* Servicos */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		79A570691C3FE4A000A23BCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79D8624B1C3B1A4E008F0D50 /* Main.storyboard */,
+				79D862531C3B1A4E008F0D50 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		79A5706A1C3FE4B800A23BCD /* Outro */ = {
+			isa = PBXGroup;
+			children = (
+				79D862471C3B1A4E008F0D50 /* AppDelegate.swift */,
+				79D862511C3B1A4E008F0D50 /* Assets.xcassets */,
+				79D862561C3B1A4E008F0D50 /* Info.plist */,
+				79D8624E1C3B1A4E008F0D50 /* HooliService2.xcdatamodeld */,
+			);
+			name = Outro;
+			sourceTree = "<group>";
+		};
+		79A5706B1C3FE4E200A23BCD /* Servicos */ = {
 			isa = PBXGroup;
 			children = (
 				79A570611C3E8E7100A23BCD /* HSServicosViewController.swift */,
 				79A570631C3EB41400A23BCD /* HSNovoServicoViewController.swift */,
 				79A570651C3EBC4C00A23BCD /* HSNovoServicoCollectionViewCell.swift */,
+				79A570671C3FE47700A23BCD /* HSTipoServicoViewController.swift */,
 			);
 			name = Servicos;
 			sourceTree = "<group>";
@@ -118,14 +149,10 @@
 		79D862461C3B1A4E008F0D50 /* HooliService2 */ = {
 			isa = PBXGroup;
 			children = (
-				79A570601C3E8E4200A23BCD /* Servicos */,
+				79A5706A1C3FE4B800A23BCD /* Outro */,
+				79A570691C3FE4A000A23BCD /* View */,
+				79A570601C3E8E4200A23BCD /* Controller */,
 				79D862681C3B1A78008F0D50 /* Frameworks */,
-				79D862471C3B1A4E008F0D50 /* AppDelegate.swift */,
-				79D8624B1C3B1A4E008F0D50 /* Main.storyboard */,
-				79D862511C3B1A4E008F0D50 /* Assets.xcassets */,
-				79D862531C3B1A4E008F0D50 /* LaunchScreen.storyboard */,
-				79D862561C3B1A4E008F0D50 /* Info.plist */,
-				79D8624E1C3B1A4E008F0D50 /* HooliService2.xcdatamodeld */,
 			);
 			path = HooliService2;
 			sourceTree = "<group>";
@@ -229,6 +256,7 @@
 				79A570641C3EB41400A23BCD /* HSNovoServicoViewController.swift in Sources */,
 				79D862501C3B1A4E008F0D50 /* HooliService2.xcdatamodeld in Sources */,
 				79D862481C3B1A4E008F0D50 /* AppDelegate.swift in Sources */,
+				79A570681C3FE47700A23BCD /* HSTipoServicoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

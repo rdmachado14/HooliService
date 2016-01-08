@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7JE-vf-GNY" id="B5d-6a-q0s">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-xj-W6V">
@@ -171,6 +171,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjZ-nP-bxB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2314.5" y="656.5"/>
+        </scene>
+        <!--Tipo Servico View Controller-->
+        <scene sceneID="FYw-eh-WgR">
+            <objects>
+                <viewController id="xa9-AR-zTj" customClass="HSTipoServicoViewController" customModule="HooliService2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0o2-ax-dRV"/>
+                        <viewControllerLayoutGuide type="bottom" id="FQd-28-PAl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AWL-gm-7gi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jy1-eR-uhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807.5" y="656.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TRT-oh-YOj">
