@@ -85,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="1231.5" y="656.5"/>
         </scene>
-        <!--Inserir Anúncio-->
+        <!--Inserir Serviço-->
         <scene sceneID="NB8-5W-p3O">
             <objects>
                 <viewController id="da0-hT-PcZ" customClass="HSNovoServicoViewController" customModule="HooliService2" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +157,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Inserir Anúncio" id="xaf-im-zmU">
+                    <navigationItem key="navigationItem" title="Inserir Serviço" id="xaf-im-zmU">
                         <barButtonItem key="rightBarButtonItem" title="Publicar" id="282-3c-B3T">
                             <connections>
                                 <action selector="btSalvar:" destination="da0-hT-PcZ" id="67d-6p-tfQ"/>
